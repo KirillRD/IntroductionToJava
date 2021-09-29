@@ -9,7 +9,7 @@ public class Main7 {
         System.out.print("Input " + str + ": ");
         while (!sc.hasNextDouble()) {
             sc.nextLine();
-            System.out.println("Wrong input. Please, try again.");
+            System.out.println("Wrong input. Input is not a number. Please, try again.");
             System.out.print("Input " + str + ": ");
         }
         value = sc.nextDouble();

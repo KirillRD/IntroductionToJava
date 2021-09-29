@@ -3,19 +3,23 @@ package by.training.simplestapp.main;
 import java.util.Scanner;
 
 public class Main1 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String str;
-
-        System.out.print("Write four-digit number: ");
-        if (scanner.hasNextInt()) {
-            str = scanner.nextLine();
-        } else {
-            str = scanner.nextLine();
-            if (str.equals("exit")) return;
+    public static int inputIntFromConsole(String str) {
+        int value;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input " + str + ": ");
+        while (!sc.hasNextInt()) {
+            sc.nextLine();
             System.out.println("Wrong input. Input is not a number. Please, try again.");
-            continue;
+            System.out.print("Input " + str + ": ");
         }
+        value = sc.nextInt();
+        return value;
+    }
+
+    public static void main(String[] args) {
+        int i = inputIntFromConsole("i");
+
+        String str = String.valueOf(i);
 
         if (str.length() == 4) {
             int firstNumber = Integer.parseInt(str.substring(0, 1));
