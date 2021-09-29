@@ -1,8 +1,8 @@
-package by.training.simplestapp.main;
+package com.epam.java_web_development.main;
 
 import java.util.Scanner;
 
-public class Main5 {
+public class Main6 {
     public static double inputDoubleFromConsole(String str) {
         double value;
         Scanner sc = new Scanner(System.in);
@@ -16,14 +16,6 @@ public class Main5 {
         return value;
     }
 
-    public static double elevate (double i) {
-        if (i >= 0) {
-            return Math.pow(i, 2);
-        } else {
-            return Math.pow(i, 4);
-        }
-    }
-
     public static void main(String[] args) {
         double a, b, c;
 
@@ -31,8 +23,12 @@ public class Main5 {
         b = inputDoubleFromConsole("b");
         c = inputDoubleFromConsole("c");
 
-        System.out.println("a: " + elevate(a));
-        System.out.println("b: " + elevate(b));
-        System.out.println("c: " + elevate(c));
+        double max = a, min = a;
+        if (max < b) max = b;
+        if (max < c) max = c;
+        if (min > b) min = b;
+        if (min > c) min = c;
+
+        System.out.println("Sum: " + (max + min));
     }
 }

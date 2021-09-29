@@ -1,4 +1,4 @@
-package by.training.simplestapp.main;
+package com.epam.java_web_development.main;
 
 import java.util.Scanner;
 
