@@ -30,8 +30,8 @@ public class Main9 {
             m2 = inputIntFromConsole("m2");
         }
         k = inputIntFromConsole("k");
-        while (k <= 0 || k >= m2) {
-            System.out.println("Wrong input. \"k\" should be natural or . Please, try again.");
+        while (k <= 0 || k >= m1) {
+            System.out.println("Wrong input. \"k\" should be natural and lower than . Please, try again.");
             k = inputIntFromConsole("k");
         }
 
