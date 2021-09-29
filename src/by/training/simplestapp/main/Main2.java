@@ -17,26 +17,25 @@ public class Main2 {
     }
 
     public static void main(String[] args) {
-        double a, b, h;
+        double a, b, c;
 
-        while (true) {
+        do {
             a = inputDoubleFromConsole("a");
+            while (a == 0) {
+                System.out.println("Wrong input. \"a\" should be not zero. Please, try again.");
+                a = inputDoubleFromConsole("a");
+            }
             b = inputDoubleFromConsole("b");
-            while (b < a) {
-                System.out.println("Wrong input. \"b\" should be bigger than \"a\". Please, try again.");
+            while (b == 0) {
+                System.out.println("Wrong input. \"b\" should be not zero. Please, try again.");
                 b = inputDoubleFromConsole("b");
             }
-            h = inputDoubleFromConsole("h");
-            while (h > (b-a)) {
-                System.out.println("Wrong input. \"h\" should be lower than (b-a). Please, try again.");
-                h = inputDoubleFromConsole("h");
+            c = inputDoubleFromConsole("c");
+            if ((Math.pow(b, 2) + 4*a*c) < 0) {
+                System.out.println("Wrong input. b^2 + 4*a*c should be equal or bigger than zero. Please, try again.");
             }
+        } while ((Math.pow(b, 2) + 4*a*c) < 0);
 
-            System.out.println("x\t\t\t\tF(x)");
-            for (double x = a, f; x <= b; x += h) {
-                f = Math.pow(Math.sin(x), 2) - Math.cos(2*x);
-                System.out.println(x + "\t\t\t" + Math.ceil(f*1000)/1000);
-            }
-        }
+        System.out.println("Expression: " + ((b + Math.sqrt(Math.pow(b, 2) + 4*a*c))/(2*a)-Math.pow(a, 3)*c+Math.pow(b, -2)));
     }
 }
