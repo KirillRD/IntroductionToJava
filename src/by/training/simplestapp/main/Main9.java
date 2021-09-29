@@ -58,5 +58,9 @@ public class Main9 {
                 mas[i] = mas1[i - m2];
             }
         }
+
+        for (int i : mas) {
+            System.out.print("[" + i + "] ");
+        }
     }
 }
