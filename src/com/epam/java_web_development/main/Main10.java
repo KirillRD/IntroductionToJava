@@ -29,7 +29,7 @@ public class Main10 {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (i%2 == 1) {
+                if ((i + 1)%2 == 1) {
                     mas[i][j] = j + 1;
                 } else {
                     mas[i][j] = n - j;
