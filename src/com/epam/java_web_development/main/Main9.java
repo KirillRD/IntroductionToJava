@@ -31,7 +31,7 @@ public class Main9 {
         }
         k = inputIntFromConsole("k");
         while (k <= 0 || k >= m1) {
-            System.out.println("Wrong input. \"k\" should be natural and lower than . Please, try again.");
+            System.out.println("Wrong input. \"k\" should be natural and lower than \"m1\". Please, try again.");
             k = inputIntFromConsole("k");
         }
 
